@@ -2,7 +2,7 @@ package sh.colak.dji.aoaread;
 
 import java.io.ByteArrayOutputStream;
 
-/** RCLink + DUML TX. Refuses motor/stick cmd ids. */
+/** RCLink + DUML TX. Allowlist: keepalive 0x06/0x77 only. */
 public final class Duml {
     private Duml() {}
 
@@ -23,8 +23,8 @@ public final class Duml {
 
     public static byte[] build(int sender, int dst, int cmdType, int cmdSet, int cmdId,
             byte[] payload, int seq) {
-        if (cmdSet == 0x03 && (cmdId == 0x8E || cmdId == 0x2A)) {
-            throw new IllegalArgumentException("forbidden motor/stick cmd");
+        if (cmdSet != 0x06 || cmdId != 0x77) {
+            throw new IllegalArgumentException("cmd not allowed");
         }
         if (payload == null) payload = new byte[0];
         int length = 13 + payload.length;
