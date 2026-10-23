@@ -37,6 +37,9 @@ public class CaptureActivity extends Activity {
     private int seq = 1;
     private TextView tv;
     private String status = "no accessory";
+    private FileOutputStream unitOut;
+    private FileOutputStream idxOut;
+    private int n574a, n5749, nOther, lossResync, lossOversize;
 
     private final BroadcastReceiver permRx = new BroadcastReceiver() {
         @Override public void onReceive(Context c, Intent i) {
@@ -135,6 +138,10 @@ public class CaptureActivity extends Activity {
         byte[] buf = new byte[16384];
         ByteArrayOutputStream acc = new ByteArrayOutputStream();
         try {
+            java.io.File dir = getExternalFilesDir(null);
+            if (dir == null) dir = getFilesDir();
+            unitOut = new FileOutputStream(new java.io.File(dir, "units.rclink"));
+            idxOut = new FileOutputStream(new java.io.File(dir, "units.idx"));
             while (running) {
                 int n = in.read(buf);
                 if (n < 0) break;
@@ -144,24 +151,43 @@ public class CaptureActivity extends Activity {
             }
         } catch (IOException e) {
             Log.e(TAG, "read loop", e);
+        } finally {
+            try { if (unitOut != null) unitOut.close(); } catch (Exception ignored) {}
+            try { if (idxOut != null) idxOut.close(); } catch (Exception ignored) {}
         }
+        Log.i(TAG, "loop done n574a=" + n574a + " n5749=" + n5749 + " nOther=" + nOther
+                + " lossResync=" + lossResync + " lossOversize=" + lossOversize);
     }
 
-    private void consume(ByteArrayOutputStream acc) {
+    private void consume(ByteArrayOutputStream acc) throws IOException {
         byte[] d = acc.toByteArray();
         int i = 0;
         while (i + 8 <= d.length) {
             if ((d[i] & 0xff) != 0x55 || (d[i + 1] & 0xff) != 0xCC) {
                 i++;
+                lossResync++;
                 continue;
             }
             int ln = (d[i + 4] & 0xff) | ((d[i + 5] & 0xff) << 8)
                     | ((d[i + 6] & 0xff) << 16) | ((d[i + 7] & 0xff) << 24);
-            if (ln < 0 || ln > 0x200000) { i++; continue; }
+            if (ln < 0 || ln > 0x200000) {
+                i++;
+                lossOversize++;
+                continue;
+            }
             if (i + 8 + ln > d.length) break;
+            int type = (d[i + 2] & 0xff) | ((d[i + 3] & 0xff) << 8);
             byte[] p = new byte[ln];
             System.arraycopy(d, i + 8, p, 0, ln);
-            onUnit((d[i + 2] & 0xff) | ((d[i + 3] & 0xff) << 8), p);
+            long ts = System.currentTimeMillis();
+            unitOut.write(d, i, 8 + ln);
+            String idx = ts + " type=" + Integer.toHexString(type) + " len=" + ln
+                    + " off=" + (8 + ln) + "\n";
+            idxOut.write(idx.getBytes("UTF-8"));
+            if (type == 0x574a) n574a++;
+            else if (type == 0x5749) n5749++;
+            else nOther++;
+            onUnit(type, p);
             i += 8 + ln;
         }
         if (i > 0) {

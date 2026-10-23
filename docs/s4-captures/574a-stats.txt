@@ -1,0 +1,17 @@
+span_ms=45369
+n_idx=14337
+n_574a=2481
+n_5749=11856
+n_other=0
+first=1792737269133 type=574a len=4080 off=4088
+last=1792737314502 type=5749 len=56 off=64
+fold_units=/sdcard/Android/data/sh.colak.dji.aoaread/files/units.rclink
+fold_idx=/sdcard/Android/data/sh.colak.dji.aoaread/files/units.idx
+rclink_bytes=10240120
+idx_bytes=557896
+not_in_git_reason=10MiB payload
+head=55 cc 4a 57 f0 0f 00 00  (type 0x574a len 4080)
+FPV_ui=DJIDeviceActivity not FpvComponent this warm
+keepalive_only_TX=0x06/0x77
+no_stick_TX=true
+no_video_display=true
