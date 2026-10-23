@@ -1,0 +1,5 @@
+dji.go.v5=26862
+
+dji.go.v4=
+com.fly.simulator=31384 31406
+

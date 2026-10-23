@@ -1,0 +1,12 @@
+exclusive READ. no accessory TX.
+second labeled run after operator pane timing (16:23).
+0x06/0x05 = 5x u16le, range 364/1024/1684 (S0 sim-port stick range)
+
+idle     ch0 1024-1024  ch1 1024-1024  ch2 1024-1024  ch3 1024-1024  ch4 364-1024
+pitch    ch0 1024-1024  ch1 1024-1024  ch2 1024-1024  ch3 1024-1024  ch4 364-1684
+roll     ch0 364-1684   ch1 1024-1024  ch2 1024-1024  ch3 1024-1024  ch4 1024-1684
+yaw      ch0 364-1024   ch1 1024-1024  ch2 939-1024   ch3 364-1684   ch4 1024-1024
+throttle ch0 1024-1177  ch1 364-1684   ch2 1024-1024  ch3 1024-1684  ch4 1024-1024
+
+axis labels not 1:1 clean (operator may have mixed sticks / leftover motion).
+0x06/0x05 IS the stick-range report on this AOA stream. full bins not in git

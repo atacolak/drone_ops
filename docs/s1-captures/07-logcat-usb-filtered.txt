@@ -1,0 +1,2 @@
+10-23 11:38:38.088  3025  4360 W UsbDeviceManager: Ignore missing legacy kernel path in bugreport dump: kernel function list:/sys/class/android_usb/android0/functions
+10-23 11:38:38.104  3025  4360 I UsbPortManager: USB HAL HIDL version: 13

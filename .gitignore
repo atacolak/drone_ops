@@ -1,0 +1,19 @@
+# local actor bind — not this research dump
+.systemd-ops/
+
+# android build
+tools/**/build/
+*.apk
+*.apk.idsig
+*.class
+*.dex
+
+# fly / datajar — never git
+*.so
+*.hprof
+*.vdex
+*.odex
+
+# editor junk
+*~
+.DS_Store

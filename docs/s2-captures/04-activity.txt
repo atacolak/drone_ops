@@ -1,0 +1,4 @@
+topResumedActivity=dji.go.v5/com.uav.component.fpv.FpvComponentActivity
+mCurrentFocus=dji.go.v5/com.uav.component.fpv.FpvComponentActivity
+task visible=true
+under=dji.go.v5/com.dji.mainpageui.device.DJIDeviceActivity

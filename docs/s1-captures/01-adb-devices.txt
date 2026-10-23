@@ -1,0 +1,3 @@
+List of devices attached
+127.0.0.1:44377        device product:q5qxxx model:SM_F946B device:q5q transport_id:42
+

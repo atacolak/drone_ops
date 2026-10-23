@@ -1,0 +1,19 @@
+S3 exclusive aoa-read after Fly FPV then force-stop dji.go.v5 + com.fly.simulator.
+Flip ON grounded. no accessory writes. no 0x03/0x8E TX.
+
+bin_len=3484569
+parsed_rclink_units=6013
+types: 0x5749=5955  0x574a=58
+0x5749 payload_len min=13 max=1015 median=41
+0x574a payload_len min=113 max=4080 median=4080
+
+duml senders: 0x92=2788 0x0e=907 0x03=740 0x01=504 0x04=286 0x06=251 ...
+duml recvs: 0x02=5539 0xee=312 0xce=104
+
+j7k.7 Flip-OFF exclusive was 797 units ALL 0x5749, senders only 0x0e/0x06.
+
+j7k.7 cmds still present: set,id (0x00,0x0e) (0x06,0x05) (0x06,0x84) (0x09,0x43) (0x51,0x29)
+
+S3 hottest new-ish: 0x23/0xb2 snd=0x92 x1149; 0x03/0xd7 snd=0x03 x303; camera-ish snd=0x01 set=0x02
+
+full aoa.bin not committed

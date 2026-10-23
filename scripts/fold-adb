@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Fold adb from sfub. ALWAYS relatch first. The wireless-debug port rotates.
+# Never adb connect from sfub. Never ask the operator for IP:port.
+set -euo pipefail
+ssh fold 'adb-wifi >/dev/null'
+serial="$(ssh fold "adb devices" | awk '$2=="device"{print $1; exit}')"
+if [[ -z "${serial}" ]]; then
+  echo "fold-adb: no device after adb-wifi. WD Off is the only remaining human toggle." >&2
+  ssh fold 'adb devices -l' >&2 || true
+  exit 1
+fi
+if [[ $# -eq 0 ]]; then
+  echo "$serial"
+  ssh fold "adb devices -l"
+  exit 0
+fi
+# quote args for the remote shell
+remote=$(printf '%q ' "$@")
+exec ssh fold "adb -s ${serial} ${remote}"

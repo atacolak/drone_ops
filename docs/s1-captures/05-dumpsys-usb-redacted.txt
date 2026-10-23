@@ -1,0 +1,1633 @@
+USB MANAGER STATE (dumpsys usb):
+USB Host Restrictor State:
+  All SIM Count:2
+  Disable Sys Node Value :OFF
+  Disable Sys Node Writable :true
+  mCurrentSysNodeValue :OFF
+  SIM BLOCK ON/OFF :false
+  MDM BLOCK ON/OFF :false
+  LckScr BLOCK ON/OFF :false
+  CurrentScrLckStateValue :SUNNY_WORK_MODE
+  ScreenLockStateValue :0
+  IsHostConnected :false
+  IsDeviceConnected :true
+  SettingBlockUsbLock :1
+  IsTKInstalled :false
+  MDM bRestrictHostAPI :false
+  MDM mStrAllowList :
+Current USB Stats: 0 0 0 0 24 16 0 0 48 16 0 0 18 16 0 0 0 0 0 0 0 0 0 0 0 16 0 0 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 [REDACTED-ID]
+Current DexModeObserver state of DeXMode :false
+Current DexModeObserver state of SemiDeXMode :false
+UsbUI:
+  mSystemReady=true
+  mBootCompleted=true
+  mSupportDualRole=true
+  mIsEmergencyMode=false
+  mIsHostConnected=false
+  mSourcePower=true
+  mIsHiccupState=false
+  mIsUsbPortWet=false
+{
+  device_manager={
+    handler={
+      current_functions=ACCESSORY
+      current_functions_applied=true
+      screen_locked=false
+      connected=true
+      configured=true
+      current_accessory={
+        manufacturer=DJI
+        model=com.dji.logiclink
+        description=DJI
+        version=v0.0.0.0
+        uri=www.dji.com
+        serial=[REDACTED]
+      }
+      host_connected=false
+      source_power=true
+      sink_power=false
+      usb_charging=false
+      hide_usb_notification=[
+        false
+        false
+      ]
+      audio_accessory_connected=false
+      kernel_state=CONFIGURED
+    }
+    USB Event Log=UsbDeviceManager activity
+    USB Event=[
+      10-22 16:11:56:646 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:01:308 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:01:944 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49891, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:01:948 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:01:953 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49892, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:01:957 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49893, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:958 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49894, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:958 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49895, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:958 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49896, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:959 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49897, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:959 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49898, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:959 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:01:959 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49899, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:963 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49900, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:963 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49901, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:964 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49902, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:965 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49903, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:966 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49904, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:967 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49905, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:968 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49906, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:968 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49907, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:981 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=49908, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 16:12:01:985 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49909, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:02:680 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49913, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:02:685 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:02:689 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49914, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:02:693 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:02:717 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 16:12:02:770 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49917, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:04:713 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49939, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:04:719 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:04:721 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=49940, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:12:04:727 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 16:12:04:753 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 16:19:39:476 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=51808, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 16:19:42:490 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:33:47:787 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:03:807 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:04:450 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52596, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:04:462 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52597, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:04:463 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:04:464 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52598, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:465 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52599, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:466 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52600, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:466 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52601, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:466 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52602, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:466 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:04:467 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52603, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:467 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52604, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:468 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52605, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:468 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52606, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:469 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52607, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:470 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52608, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:471 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52609, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:471 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52610, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:473 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52611, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:34:04:487 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52612, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:05:215 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52616, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:05:221 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:05:224 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52617, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:05:228 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:05:257 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 17:34:05:304 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52620, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:07:268 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52642, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:07:272 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:07:277 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52643, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:07:279 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:34:07:300 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 17:34:53:817 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52659, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:34:56:836 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:125 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52722, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:10:129 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52723, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:10:129 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52724, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:130 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52725, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:131 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52726, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:131 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52727, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:138 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52728, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:140 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52729, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:141 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52730, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:141 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52731, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:141 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52732, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:142 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52733, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:143 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52734, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:144 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=52735, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 17:36:10:168 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:184 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:201 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52737, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:10:901 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52741, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:10:903 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:909 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52742, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:10:913 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:934 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 17:36:10:990 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52745, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:12:912 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52767, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:12:916 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:12:926 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=52768, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:36:12:928 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 17:36:12:952 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 17:52:24:004 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61672, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 17:52:27:019 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:38:660 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:48:864 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:49:537 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61888, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:49:549 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:49:553 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61889, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:49:555 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61890, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:555 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61891, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:556 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61892, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:556 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61893, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:556 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61894, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:556 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61895, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:557 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61896, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:557 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61897, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:557 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61898, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:557 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:49:557 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61899, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:564 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61900, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:564 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61901, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:564 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=61902, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-22 18:45:49:581 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61903, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:50:322 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61907, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:50:328 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:50:336 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61908, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:50:341 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:50:358 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 18:45:50:410 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61911, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:52:345 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61944, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:52:348 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:52:352 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=61946, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 18:45:52:355 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-22 18:45:52:382 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-22 19:01:57:275 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=68413, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-22 19:02:00:279 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:44:530 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:48:512 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:180 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72187, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:49:184 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:192 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72188, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:49:193 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72189, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:194 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72190, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:194 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72191, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:195 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72192, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:195 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:195 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72193, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:196 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72194, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:197 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72195, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:201 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72196, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:202 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72197, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:202 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72198, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:203 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72199, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:204 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72200, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:205 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72201, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:206 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72202, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:208 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72203, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:05:49:225 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72204, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:49:898 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72209, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:49:901 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:910 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72210, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:49:930 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:974 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-23 11:05:49:996 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72213, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:51:963 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72235, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:51:964 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72236, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:05:51:969 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:51:973 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:05:52:015 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-23 11:06:59:536 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72261, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:02:544 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:166 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72289, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:03:177 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:177 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72290, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:03:178 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72291, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:178 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72292, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:178 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72293, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:178 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72294, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:179 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72295, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:179 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72296, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:179 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72297, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:184 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72298, ACTION=change, ACCESSORY=GETPROTOCOL, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:185 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72299, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:186 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:187 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72300, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:187 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72301, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:188 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72302, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:189 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72303, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:192 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72304, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:193 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72305, ACTION=change, ACCESSORY=SENDSTRING, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:200 USB UEVENT: {SUBSYSTEM=misc, MAJOR=10, SEQNUM=72306, ACTION=change, ACCESSORY=START, DEVNAME=usb_accessory, MINOR=100, DEVPATH=/devices/virtual/misc/usb_accessory}
+      10-23 11:07:03:206 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72307, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:03:891 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72311, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:03:895 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:900 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72312, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:03:906 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:951 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+      10-23 11:07:03:983 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72315, ACTION=change, USB_STATE=DISCONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:05:843 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72337, ACTION=change, USB_STATE=CONNECTED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:05:846 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:05:852 USB UEVENT: {SUBSYSTEM=android_usb, SEQNUM=72338, ACTION=change, USB_STATE=CONFIGURED, DEVPATH=/devices/virtual/android_usb/android0}
+      10-23 11:07:05:855 USB intent: Intent { act=android.hardware.usb.action.USB_STATE flg=0x31000000 xflg=0x4 (has extras) }
+      10-23 11:07:05:867 USB intent: Intent { act=android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE flg=0x11000000 xflg=0x4 (has extras) }
+    ]
+  }
+  host_manager={
+    num_connects=94
+    connections=[
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629094085
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629094124
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=0
+        timestamp=1792629098961
+        manufacturer=13770
+        product=4356
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=0
+        timestamp=1792629099274
+        manufacturer=3141
+        product=25451
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=0
+        timestamp=1792629100006
+        manufacturer=13770
+        product=4354
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=-1
+        timestamp=1792629102003
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629102066
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629102083
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=0
+        timestamp=1792629106751
+        manufacturer=13770
+        product=4356
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=0
+        timestamp=1792629107117
+        manufacturer=3141
+        product=25451
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=0
+        timestamp=1792629107701
+        manufacturer=13770
+        product=4354
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=-1
+        timestamp=1792629109758
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629109806
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629109886
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=0
+        timestamp=1792629114662
+        manufacturer=13770
+        product=4356
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=0
+        timestamp=1792629114986
+        manufacturer=3141
+        product=25451
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=0
+        timestamp=1792629115666
+        manufacturer=13770
+        product=4354
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=-1
+        timestamp=1792629117713
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629117743
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629117779
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=0
+        timestamp=1792629122687
+        manufacturer=13770
+        product=4356
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=0
+        timestamp=1792629122999
+        manufacturer=3141
+        product=25451
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=0
+        timestamp=1792629123639
+        manufacturer=13770
+        product=4354
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=-1
+        timestamp=1792629125701
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629125744
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629125783
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=0
+        timestamp=1792629130663
+        manufacturer=13770
+        product=4356
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=0
+        timestamp=1792629130969
+        manufacturer=3141
+        product=25451
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=0
+        timestamp=1792629131670
+        manufacturer=13770
+        product=4354
+        is_headset={
+          in=false
+          out=false
+        }
+      }
+      {
+        device_address=/dev/bus/usb/002/003
+        mode=-1
+        timestamp=1792629139310
+      }
+      {
+        device_address=/dev/bus/usb/002/004
+        mode=-1
+        timestamp=1792629139338
+      }
+      {
+        device_address=/dev/bus/usb/002/005
+        mode=-1
+        timestamp=1792629139372
+      }
+    ]
+  }
+  port_manager={
+    is_simulation_active=false
+    usb_ports={
+      port={
+        id=port0
+        supported_modes=dual
+        supports_compliance_warnings=false
+      }
+      status={
+        connected=true
+        current_mode=ufp
+        power_role=source
+        data_role=device
+        role_combinations=[
+          {
+            power_role=source
+            data_role=host
+          }
+          {
+            power_role=source
+            data_role=device
+          }
+          {
+            power_role=sink
+            data_role=host
+          }
+          {
+            power_role=sink
+            data_role=device
+          }
+        ]
+        contaminant_presence_status=disabled
+        usb_data_status=unknown
+        is_power_transfer_limited=false
+        usb_power_brick_status=unknown
+        compliance_warning_status=[]
+      }
+      can_change_mode=true
+      can_change_power_role=true
+      can_change_data_role=true
+      connected_at_millis=157645432
+      last_connect_duration_millis=0
+    }
+    usb_hal_version=13
+  }
+  alsa_manager={
+    cards_parser=0
+  }
+  settings_manager={
+    user_settings={
+      user_id=0
+      device_attached_activities=[
+        {
+          activity={
+            package_name=com.android.mtp
+            class_name=com.android.mtp.ReceiverActivity
+          }
+          filters=[
+            {
+              vendor_id=-1
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=-1
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+          ]
+        }
+        {
+          activity={
+            package_name=com.sec.android.easyMover
+            class_name=com.sec.android.easyMover.ui.launch.CableLauncherActivity
+          }
+          filters=[
+            {
+              vendor_id=1452
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4042
+              product_id=32818
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4042
+              product_id=32817
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26720
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26725
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26726
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26736
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26732
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26718
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26715
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26716
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=2996
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=2996
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4100
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4100
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1221
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1221
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=39861
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=39861
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=3725
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=3725
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11669
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11669
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1478
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1478
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8888
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8888
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1154
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1154
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4046
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4046
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10007
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10007
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1245
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1245
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4265
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4265
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6127
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6127
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11084
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11084
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=7871
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=7871
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8921
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8921
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8921
+              product_id=-1
+              class=1
+              subclass=1
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=8921
+              product_id=-1
+              class=1
+              subclass=3
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4817
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4817
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6353
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6353
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6353
+              product_id=-1
+              class=255
+              subclass=66
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10518
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10518
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10013
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10013
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6610
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6610
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10821
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10821
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=7099
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=7099
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1161
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1161
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11022
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=11022
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10864
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=10864
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=2821
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=2821
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1242
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1242
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1033
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1033
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=13211
+              product_id=-1
+              class=255
+              subclass=255
+              protocol=0
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=13211
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=6018
+              product_id=-1
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+          ]
+        }
+        {
+          activity={
+            package_name=com.sec.android.easyMover.Agent
+            class_name=com.sec.android.easyMover.Agent.OTGAttachingActivity
+          }
+          filters=[
+            {
+              vendor_id=1452
+              product_id=-1
+              class=6
+              subclass=1
+              protocol=1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=1256
+              product_id=26720
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=4042
+              product_id=32772
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+          ]
+        }
+        {
+          activity={
+            package_name=com.sec.android.gallery3d
+            class_name=com.samsung.android.gallery.app.activity.UsbAttachActivity
+          }
+          filters={
+            vendor_id=-1
+            product_id=-1
+            class=6
+            subclass=1
+            protocol=1
+            manufacturer_name=null
+            product_name=null
+            serial_number=[REDACTED]
+          }
+        }
+        {
+          activity={
+            package_name=com.uxspace
+            class_name=com.uxspace.MainActivity
+          }
+          filters={
+            vendor_id=13770
+            product_id=-1
+            class=-1
+            subclass=-1
+            protocol=-1
+            manufacturer_name=null
+            product_name=null
+            serial_number=[REDACTED]
+          }
+        }
+        {
+          activity={
+            package_name=sh.colak.xrconsole.recorder
+            class_name=sh.colak.xrconsole.recorder.MainActivity
+          }
+          filters=[
+            {
+              vendor_id=13770
+              product_id=-1
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+            {
+              vendor_id=3141
+              product_id=25451
+              class=-1
+              subclass=-1
+              protocol=-1
+              manufacturer_name=null
+              product_name=null
+              serial_number=[REDACTED]
+            }
+          ]
+        }
+      ]
+      accessory_attached_activities=[
+        {
+          activity={
+            package_name=com.google.android.gms
+            class_name=com.google.android.gms.backup.component.D2dSourceActivity
+          }
+          filters={
+            manufacturer=Google, Inc.
+            model=DeviceMigration
+            version=39842
+          }
+        }
+        {
+          activity={
+            package_name=com.google.android.projection.gearhead
+            class_name=com.google.android.apps.auto.carservice.gmscorecompat.FirstActivityImpl
+          }
+          filters=[
+            {
+              manufacturer=Android
+              model=Android Open Automotive Protocol
+              version=null
+            }
+            {
+              manufacturer=Android
+              model=Android Auto
+              version=null
+            }
+            {
+              manufacturer=Android
+              model=Android
+              version=null
+            }
+          ]
+        }
+        {
+          activity={
+            package_name=com.sec.android.easyMover
+            class_name=com.sec.android.easyMover.ui.launch.AccessorySenderActivity
+          }
+          filters={
+            manufacturer=Samsung
+            model=null
+            version=null
+          }
+        }
+        {
+          activity={
+            package_name=com.fly.simulator
+            class_name=com.fly.simulator.SimulatorActivity
+          }
+          filters={
+            manufacturer=DJI
+            model=com.dji.logiclink
+            version=v0.0.0.0
+          }
+        }
+        {
+          activity={
+            package_name=dji.go.v5
+            class_name=com.dji.component.application.activity.DJIAoaActivity
+          }
+          filters=[
+            {
+              manufacturer=DJI
+              model=com.dji.logiclink
+              version=null
+            }
+            {
+              manufacturer=DJI
+              model=WM160
+              version=null
+            }
+            {
+              manufacturer=DJI
+              model=com.dji.link
+              version=null
+            }
+          ]
+        }
+      ]
+    }
+    profile_group_settings={
+      parent_user_id=0
+      device_preferences=[
+        {
+          filter={
+            vendor_id=3141
+            product_id=25451
+            class=239
+            subclass=2
+            protocol=1
+            manufacturer_name=Sonix Technology Co., Ltd.
+            product_name=USB 2.0 Camera
+            serial_number=[REDACTED]
+          }
+          user_package={
+            user_id=0
+            package_name=sh.colak.xrconsole.recorder
+          }
+        }
+        {
+          filter={
+            vendor_id=13770
+            product_id=4356
+            class=0
+            subclass=0
+            protocol=0
+            manufacturer_name=VITURE Luma Ultra
+            product_name=VITURE Luma Ultra XR GLASSES
+            serial_number=[REDACTED]
+          }
+          user_package={
+            user_id=0
+            package_name=sh.colak.xrconsole.recorder
+          }
+        }
+      ]
+      accessory_preferences={
+        filter={
+          manufacturer=DJI
+          model=com.dji.logiclink
+          version=v0.0.0.0
+        }
+        user_package={
+          user_id=0
+          package_name=com.fly.simulator
+        }
+      }
+      USB Event Log=UsbProfileGroupSettingsManager activity
+      USB Event=[
+        10-21 15:57:25:823 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-21 15:57:27:828 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-21 16:07:18:730 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 14:12:51:145 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 14:12:53:013 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 16:12:02:702 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 16:12:04:742 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 17:34:05:243 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 17:34:07:285 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 17:36:10:923 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 17:36:12:937 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 18:45:50:347 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-22 18:45:52:365 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-23 11:05:49:952 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-23 11:05:51:986 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-23 11:07:03:933 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+        10-23 11:07:05:858 accessoryAttached: Intent { act=android.hardware.usb.action.USB_ACCESSORY_ATTACHED flg=0x11000000 (has extras) }
+      ]
+    }
+  }
+  permissions_manager={
+    user_permissions={
+      user_id=0
+      accessory_permissions={
+        accessory_description=DJI RC-N2/3
+        uids=10386
+      }
+    }
+  }
+}

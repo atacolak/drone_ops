@@ -1,0 +1,13 @@
+current_functions=ACCESSORY
+connected=true configured=true
+manufacturer=DJI
+model=com.dji.logiclink
+version=v0.0.0.0
+description=DJI
+uri=www.dji.com
+serial=[REDACTED]
+accessory_description=DJI RC-N2/3
+uids=10382
+usb_charging=false
+source_power=true
+host_connected=false

@@ -1,0 +1,4 @@
+ro.product.model=SM-F946B
+ro.build.display.id=BP4A.251205.006.F946BXXS7GZI1
+ro.build.version.release=16
+ro.build.version.sdk=36

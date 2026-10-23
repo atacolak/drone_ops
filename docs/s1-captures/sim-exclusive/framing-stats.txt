@@ -1,0 +1,27 @@
+source: exclusive openAccessory read after force-stop com.fly.simulator + dji.go.v5
+host: SM-F946B fold-local adb
+capture_bytes: 408064
+parsed_rclink_units: 797
+rclink_type: 0x5749 (55 cc 49 57) all units
+skipped_non_sync_bytes: 383904 (USB 512-byte reads; short units then pad)
+no_writes_to_accessory: true
+
+inner DUML senders: 0x0e x526, 0x06 x271
+inner DUML recvs: 0x02 x526, 0xee x271
+
+cmd histogram (set,id,cmd_type,snd,rcv) top:
+  225  set=0x06 id=0x05 type=0x00 snd=0x06 rcv=0x02
+  141  set=0x51 id=0x29 type=0x10 snd=0x0e rcv=0xee
+  105  set=0x51 id=0x29 type=0x00 snd=0x0e rcv=0xee
+   65  set=0x00 id=0x0e type=0x40 snd=0x0e rcv=0x02
+   50  set=0x09 id=0x43 type=0x00 snd=0x0e rcv=0x02
+   49  set=0x06 id=0x84 type=0x00 snd=0x0e rcv=0x02
+   24  set=0x09 id=0x08 type=0x00 snd=0x0e rcv=0x02
+   24  set=0x09 id=0x75 type=0x00 snd=0x0e rcv=0x02
+   24  set=0x09 id=0x75 type=0x00 snd=0x0e rcv=0xee
+   23  set=0x06 id=0x1e type=0x20 snd=0x06 rcv=0x02
+   23  set=0x00 id=0xf1 type=0x20 snd=0x06 rcv=0x02
+
+inner payload lengths: 26x225, 24x221, 15x99, 13x81, 14x76, 17x35, 69x25, 19x23, 22x12
+
+full aoa.bin not committed (ascii runs present; treat as possible ids)

@@ -1,0 +1,11 @@
+# exclusive fd after Fly FPV then force-stop Fly. Flip ON grounded. no motors.
+
+TX keepalive dst=0x06 n=29
+55 cc 49 57 15 00 00 00 55 15 04 a9 02 06 01 00 40 06 77 01 01 00 ff ff 20 00 00 ff 61
+
+TX keepalive dst=0x0e n=29
+55 cc 49 57 15 00 00 00 55 15 04 a9 02 0e 02 00 40 06 77 01 01 00 ff ff 20 00 00 6b 80
+
+cmd_set=0x06 cmd_id=0x77 sender=0x02
+forbidden not sent: 0x03/0x8E 0x03/0x2A takeoff land motors
+inbound continued after TX (55 cc 4a 57 and 55 cc 49 57). usb write ≠ aircraft motion.
