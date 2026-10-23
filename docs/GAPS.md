@@ -8,11 +8,11 @@ not a wishlist. these are the walls we hit. evidence in the linked notes.
 
 **have:** names only inside packed `libdatajar.so`. [`docs/s4-fly-datajar-ids.md`](s4-fly-datajar-ids.md)
 
-**wall:** user fold, not debuggable, no su/frida, no exported stick api. gadget wrap of a copy **not built**. [`docs/s4-steer-fly.md`](s4-steer-fly.md) [`docs/s4-fly-runtime-dex.md`](s4-fly-runtime-dex.md)
+**wall:** user fold, not debuggable, no su. gadget wrap **sigill**. fridabox **sigsegv**. no-root software sniff of fly’s exclusive fd = **no.** [`docs/s4-fly-observe-bytes.md`](s4-fly-observe-bytes.md)
 
-**do not** keep unpacking the so as the job. **do not** cargo-cult mini-1 `0x03/0x8E`.
+**do not** keep unpacking the so as the job. **do not** cargo-cult mini-1 `0x03/0x8E` as a frame lottery.
 
-**research to delegate:** fridabox (unmodified apk, don’t replace store fly) then gadget-on-a-copy. instrument `openAccessory` / outbound writes / `JNIUsbAccessory` / joystick class load. usb accessory in a vm may fail even if classes load — report those separately.
+**research to delegate:** hardware usb tap or root/usbmon to capture **store fly** outbound. one supervised center-only 8e test is a hypothesis, not discovery.
 
 full write-up: [`docs/REPORT-protocol-boundary.md`](REPORT-protocol-boundary.md)
 

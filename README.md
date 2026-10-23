@@ -1,42 +1,59 @@
 # drone_ops
 
-we want to fly a **DJI Flip** from **our** software, through the **physical remote**, so we keep the remote’s long-range radio instead of the phone’s short wifi.
+software flight of a **DJI Flip** through the **RC-N3’s long-range radio** (usb phone → remote → o4 → aircraft). **not** dji fly’s 50 m wifi.
 
-today we can **listen** to the remote over USB (stick positions show up in a tiny app of ours). we cannot yet send our own stick, gimbal, or mode commands. the official DJI Fly app already can — it talks USB to the remote, and the remote talks to the drone.
-
-**what this is for:** our own control surface (and later, software that flies with obstacle avoidance on). not their UI. two bets in parallel:
-
-1. copy what Fly writes, and send it ourselves.
-2. **steer Fly itself** so it keeps writing, and we just tell Fly what to do.
-
-this repo is the research dump. it is **not** a “go fly in the living room” kit.
+this is a research dump. **not** a flight kit. nothing here is a license to take off indoors.
 
 ## start here
 
-| read | why |
+| | |
 |---|---|
-| [`docs/PIPE.md`](docs/PIPE.md) | how the phone, remote, and drone actually connect; when to open/close DJI Fly |
-| [`docs/GAPS.md`](docs/GAPS.md) | what blocked us — start here to delegate research |
-| [`docs/FOLD-CONTROL.md`](docs/FOLD-CONTROL.md) | how we talk to the phone from this pc |
-| [`docs/EXPLORATION.md`](docs/EXPLORATION.md) | original intent / constraints |
+| [`docs/P0-FLIGHT.md`](docs/P0-FLIGHT.md) | p0: flight authority. what success is. |
+| [`docs/PIPE.md`](docs/PIPE.md) | how the usb/o4 pipe actually works |
+| [`docs/GAPS.md`](docs/GAPS.md) | walls, tagged claims |
+| [`.beads/issues.jsonl`](.beads/issues.jsonl) | epic `dji-flip-g0-g1-research-j7k` |
 
-stage notes `docs/s0-*` … `docs/s4-*` are evidence, not tutorials.
+evidence notes: `docs/s0-*` … `docs/s4-*`.
 
-## what we actually have
+## proven on this Flip + RC-N3
 
-- accessory identity: `DJI` / `com.dji.logiclink` / `v0.0.0.0` (top port)
-- our apk `tools/aoa-read` owns usb **without Fly as the ui**
-- keepalive TX only (`0x06/0x77`). **no stick inject**
-- inbound sticks show on bars: duml `0x06/0x05`, five u16, 364 / 1024 / 1684
-- after **Fly-warm** (live FPV → kill Fly): fat **`0x574a`** video-class payloads appear. **not demuxed.** parked for a **server** spatial-mapping later
-- beads: `.beads/issues.jsonl` (epic `dji-flip-g0-g1-research-j7k`)
+- accessory: `DJI` / `com.dji.logiclink` / `v0.0.0.0` (phone on **top** cradle)
+- our apk `tools/aoa-read` can own usb with fly killed
+- **inbound** stick **reports**: duml `0x06/0x05`, 364/1024/1684. that is the rc telling the phone, **not** us flying
+- keepalive **tx** only: `0x06/0x77` (allowlist in `Duml.java` — everything else throws)
+- after fly-warm, **`0x574a`** video-class units exist (not demuxed). p1, not p0
+- a fly **clone** (`dji.go.zz`) lived, asked for the **real** accessory; still **no outbound `55 cc` dump**
 
-## what we do not have
+## dead on this box (do not rerun blindly)
 
-numeric command ids from inside DJI Fly (the bytes it sends for sticks / cine vs sport / gimbal). the app is packed. see gaps.
+| path | result |
+|---|---|
+| frida gadget / `wrap.sh` in a copy | **sigill** in `gum-js-loop`. java never ready. [`docs/s4-fly-observe-bytes.md`](docs/s4-fly-observe-bytes.md) |
+| fridabox virtual fly | **sigsegv** after appguard `onCreate` |
+| msdk v5.18 | **flip not on the product list.** mini 4 pro is other-model. no app key, no connect. [`docs/s4-msdk-probe.md`](docs/s4-msdk-probe.md) |
+| dronelink | installed; **login wall**; never saw the rc. [`docs/s4-dronelink-probe.md`](docs/s4-dronelink-probe.md) |
+| fly fpv sidecar | camera tap only. **no virtual-stick chrome** on this rc overlay. [`docs/s4-fly-sidecar.md`](docs/s4-fly-sidecar.md) |
+| apk “virtual stick” ui names | **`wifi_` / `handheld`**. not the rc fpv overlay. **not** the o4 path. [`docs/s4-fly-vs-surface.md`](docs/s4-fly-vs-surface.md) |
+
+mini-1 `0x03/0x8E` and neo wifi are **other aircraft**. do not cargo-cult them as flip facts.
+
+## the actual wall
+
+**we have never captured what store dji fly writes on usb** to this rc.
+
+android will not let a second app sniff fly’s exclusive accessory fd. this fold is graphene **user**, **not debuggable**, **no magisk**. so: **no-root software usb sniffer = no.**
+
+without those bytes we do not have stick/gimbal/mode **send** ids for **this** pair. inbound reports ≠ inject.
+
+## next experiments (o4 only)
+
+1. **hardware usb tap** in the top-cradle cable (cynthion / beagle / real usb2 bulk analyzer — not a charger dongle). watch fly’s writes. no root.
+2. **root / usbmon** on the fold — same bytes, software.
+3. **one** supervised **center-only** mini-1-shaped joystick frame, operator holding the bird — a single hypothesis, **not** a frame lottery. not indoor fishing.
+
+**not next:** another wrap.sh, another account-gated app unless the operator logs in themselves, 50 m wifi as a silent replace for o4.
 
 ## hardware
 
-- aircraft: DJI Flip. controller: RC-N3.
-- fold on **top** cradle. charge the rc on the **bottom**.
-- Graphene/user fold, **no magisk**.
+- flip + rc-n3. fold on **top**. charge rc on **bottom**.
+- talk to the phone: [`docs/FOLD-CONTROL.md`](docs/FOLD-CONTROL.md) (`ssh fold`, never pair this pc).

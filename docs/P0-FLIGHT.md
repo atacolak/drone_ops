@@ -1,29 +1,29 @@
 # p0 — software flight authority on this Flip
 
-auditor 2026-10-23. **flight is the critical path. video is not.**
+**radio:** phone usb → **RC-N3** → **O4** → Flip. do **not** swap that for 50 m wifi.
 
-goal: Flip executes **software-defined** commands through **RC-N3 / O4**, later autonomous under a supervised fail-safe. Flip is **not** in DJI MSDK. Mini 4 Pro + RC-N3 virtual sticks (MSDK / DroneLink) and Mini-1 DJI-Link / Neo wifi are **other aircraft**.
+**success:** software-originated command (not a physical stick) → aircraft accepts authority → bounded movement we can attribute → release/recover. outdoor, operator holding the rc. not the living room.
+
+Flip is **not** on MSDK v5.18’s list. Mini 4 Pro + RC-N3 virtual sticks (MSDK / DroneLink) and Mini-1 DJI-Link / Neo wifi are **other aircraft**.
 
 ## five claims (keep separate)
 
 transport ≠ routing ≠ ack ≠ **authority** ≠ **movement**.
 
-## three paths
+## what we know (2026-10-24)
 
-1. **msdk** — read-only v5 probe on RC-N3 + Flip. connect / model / capabilities / unsupported. **no flight cmds.**
-2. **dji fly** — can Fly issue **software** movement (virtual stick / modes), or does RC firmware own physical sticks only? sidecar / instrument Fly / high-level modes. ui-automation of a QuickShot is **not** arbitrary trajectory.
-3. **raw usb** — does RC forward phone-originated flight cmds, and what session/auth they need.
+- transport works. we listen. we keepalive. we do not inject sticks.
+- store fly **fpv on this rc has no virtual-stick chrome**. apk vs ui names are **wifi/handheld**.
+- in-process observe of fly **failed** (gadget sigill, fridabox sigsegv). **no outbound `55 cc`.**
+- msdk: no flip on the list; we did not connect (no app key). dronelink: login wall, no rc.
+- operator: **no dji developer key.** do not gate the next step on one.
 
-## order
+## remaining o4 bets
 
-1. install the **checksum-valid** gadget copy (`j7k.28` apk). capture outbound around **camera/gimbal**, not guessed sticks.
-2. no more blind appguard without a new falsifiable hypothesis.
-3. outdoor bounded movement only with operator holding the RC. not this indoor session.
+1. **see fly’s usb writes** — hardware sniffer or root/usbmon. this is how mini-1 actually got ids (decode, not brute force).
+2. **one center-only 8e-shaped send**, operator holding the aircraft — hypothesis test, not discovery of the id space.
+3. do **not** spray duml until something twitches.
 
-## contingency
+## not remaining
 
-if raw O4 inject fails: instrument Fly or Flip wifi. **do not** silently swap km-range O4 for 50 m wifi. if firmware rejects external authority, show that evidence.
-
-## success
-
-linked Flip + RC-N3/O4 → software cmd (not physical stick) → authority accepted → bounded movement attributable → release/recover. independently verified, or a evidenced barrier + alternatives.
+blind wrap.sh, account-gated gcs unless operator logs in, treating wifi joystick layouts as the km-range path.
