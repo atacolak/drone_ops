@@ -2,35 +2,35 @@
 
 not a wishlist. these are the walls we hit. evidence in the linked notes.
 
-## 1. AppGuard: no numbers without a dump
+## 1. AppGuard: names ≠ protocol
 
-**want:** `cmdSet` / `cmdId` for Fly virtual stick, flight mode (C/N/S), gimbal.
+**want:** what fly **actually writes** on usb (timestamped, direction-tagged bytes), then whether the **flip** accepts programmatic sticks.
 
-**have:** names only (`DataFlycJoystick`, `SendVirtualStickFlightControlData`, `CmdIdFlyc`, gimbal enums) inside `dji.go.v5` → `libdatajar.so` (~219 MiB).
+**have:** names only inside packed `libdatajar.so`. [`docs/s4-fly-datajar-ids.md`](s4-fly-datajar-ids.md)
 
-**wall:**
+**wall:** user fold, not debuggable, no su/frida, no exported stick api. gadget wrap of a copy **not built**. [`docs/s4-steer-fly.md`](s4-steer-fly.md) [`docs/s4-fly-runtime-dex.md`](s4-fly-runtime-dex.md)
 
-- on disk the so is an **AppGuard ELF**, not a zip-of-dex. no `dex\n` magic. [`docs/s4-fly-datajar-ids.md`](s4-fly-datajar-ids.md)
-- outer `classes.dex` is an AppGuard stub. jadx is amap + guard. [`docs/s4-fly-usb-tx.md`](s4-fly-usb-tx.md)
-- runtime dump **blocked** on this fold: `user` / non-debuggable, SELinux hides `/proc/<pid>/maps`, `am dumpheap` SecurityException, **no su**, **no frida**. [`.dex mmap` ~1.7 MiB = stub only](s4-fly-runtime-dex.md)
+**do not** keep unpacking the so as the job. **do not** cargo-cult mini-1 `0x03/0x8E`.
 
-**research to delegate:** zygisk/dumpdex / frida-server / debuggable wrap of `dji.go.v5` that still decrypts datajar. then jadx `CmdIdFlyc$CmdIdType` constructors. **do not** cargo-cult Mini-1 `0x03/0x8E` as Flip.
+**research to delegate:** fridabox (unmodified apk, don’t replace store fly) then gadget-on-a-copy. instrument `openAccessory` / outbound writes / `JNIUsbAccessory` / joystick class load. usb accessory in a vm may fail even if classes load — report those separately.
 
-## 2. `0x574a` exists; we did not turn it on ourselves
+full write-up: [`docs/REPORT-protocol-boundary.md`](REPORT-protocol-boundary.md)
 
-**want:** video-class mux without launching DJI Fly, then ship payloads to a **server** for spatial mapping.
+## 2. `0x574a` is inbound; enable still unknown
 
-**have:** Fly live-FPV → force-stop Fly → our apk still sees `0x574a` (~4k, some annex-b-shaped). [`docs/PIPE.md`](PIPE.md), [`docs/s3-stream.md`](s3-stream.md)
+**want:** video + telemetry on a **server** for mapping. fold does not need a player.
 
-**wall:** unknown **which duml (if any)** Fly writes to enable that mux. we only have the boot ritual.
+**have:** after fly-warm, `0x574a` units exist. fly logs `dataType==22346`. fly does **not** “write 0x574a” to enable. [`docs/s4-fly-video-enable.md`](s4-fly-video-enable.md)
 
-**research to delegate:** reverse Fly’s video-start / accessory-enable path; reproduce in AoaRead. demux is a **later server** problem, not a fold player.
+**wall:** aoaread currently **drops** non-stick units. no retained 30–60s payload dump. no server decode yet.
 
-## 3. reports ≠ inject
+**research to delegate:** record complete `0x574a` with timestamps + original boundaries; decode off-phone. hunt telemetry in `0x5749` separately.
 
-inbound `0x06/0x05` is the rc **telling** us stick positions. keepalive `0x06/0x77` is a session ping. neither is virtual stick. [`docs/s4-stick-wiggle.md`](s4-stick-wiggle.md)
+## 3. reports ≠ inject (and inject may not even be fly)
 
-until (1) lands, **no TX** of stick/takeoff/sport.
+inbound `0x06/0x05` is the rc **telling** us sticks. keepalive is a ping. [`docs/s4-stick-wiggle.md`](s4-stick-wiggle.md)
+
+`DataFlycJoystick` in the apk does **not** prove this flip takes virtual sticks from the phone. the remote’s firmware may own physical sticks. two proofs, separately: fly outbound on **this** aircraft, then our reproduction. **no guessed stick TX.**
 
 ## 4. sim is the wrong apk
 
@@ -39,3 +39,10 @@ until (1) lands, **no TX** of stick/takeoff/sport.
 ## out of scope until asked
 
 rooting the fold, indoor flight, 8E-on-the-wire, a video player in AoaRead.
+
+## 5. two products
+
+1. **o4 sensor ingestion** (video + telemetry, read-only) — can move now.
+2. **programmatic flight control** — feasibility still uncertain. do not stall (1) on (2).
+
+TX must be an **allowlist** (keepalive only) before anyone adds commands.
