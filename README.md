@@ -1,22 +1,23 @@
 # drone_ops
 
-**the remote is the radio. the phone is just a usb parasite.**
+we want to fly a **DJI Flip** from **our** software, through the **physical remote**, so we keep the remote’s long-range radio instead of the phone’s short wifi.
 
-research dump for **DJI Flip + RC-N3**: own the **phone-facing USB accessory**, let the **RC’s O4** keep the km-range link. not DJI Fly’s 50 m wifi. not a flight controller. **listen-only** until we have fly’s real write ids.
+today we can **listen** to the remote over USB (stick positions show up in a tiny app of ours). we cannot yet send our own stick, gimbal, or mode commands. the official DJI Fly app already can — it talks USB to the remote, and the remote talks to the drone.
 
-```
-AoaRead on fold  --usb, TOP cradle-->  RC-N3  --o4-->  Flip
-```
+**what this is for:** our own control surface (and later, software that flies with obstacle avoidance on). not their UI. two bets in parallel:
 
-this is **not** consent to fly indoors, inject sticks, or arm motors.
+1. copy what Fly writes, and send it ourselves.
+2. **steer Fly itself** so it keeps writing, and we just tell Fly what to do.
+
+this repo is the research dump. it is **not** a “go fly in the living room” kit.
 
 ## start here
 
 | read | why |
 |---|---|
-| [`docs/PIPE.md`](docs/PIPE.md) | the pipe, what a “channel” is, **when** to turn Fly on/off |
-| [`docs/GAPS.md`](docs/GAPS.md) | what blocked us — delegate research from here |
-| [`docs/FOLD-CONTROL.md`](docs/FOLD-CONTROL.md) | how we talk to the fold (`fold-adb`, never pair this pc) |
+| [`docs/PIPE.md`](docs/PIPE.md) | how the phone, remote, and drone actually connect; when to open/close DJI Fly |
+| [`docs/GAPS.md`](docs/GAPS.md) | what blocked us — start here to delegate research |
+| [`docs/FOLD-CONTROL.md`](docs/FOLD-CONTROL.md) | how we talk to the phone from this pc |
 | [`docs/EXPLORATION.md`](docs/EXPLORATION.md) | original intent / constraints |
 
 stage notes `docs/s0-*` … `docs/s4-*` are evidence, not tutorials.
@@ -32,7 +33,7 @@ stage notes `docs/s0-*` … `docs/s4-*` are evidence, not tutorials.
 
 ## what we do not have
 
-numeric fly **write** cmd ids (virtual stick, C/N/S, gimbal). AppGuard ate the dex. see gaps.
+numeric command ids from inside DJI Fly (the bytes it sends for sticks / cine vs sport / gimbal). the app is packed. see gaps.
 
 ## hardware
 
